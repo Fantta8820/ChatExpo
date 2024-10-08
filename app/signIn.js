@@ -90,7 +90,28 @@ export default function SignIn() {
               />
             </View>
 
-            <Text style={{fontSize: hp(1.8)}} className="font-semibold text-right text-neutral-500"></Text>
+            <Text
+              style={{ fontSize: hp(1.8) }}
+              className="font-semibold text-right text-neutral-500">
+              Esqueceu a senha?
+            </Text>
+          </View>
+
+          <View>
+            {loading ? (
+              <View className="flex-row justify-center">
+                <Loading size={hp(6.5)} />
+              </View>
+            ) : (
+              <TouchableOpacity
+                onPress={handleLogin}
+                style={{ height: hp(6.5) }}
+                className="bg-indigo-500 rounded-xl justify-center">
+                <Text style={{ fontSize: hp(2.7) }} className="text-white font-bold tracking-wider">
+                  Login
+                </Text>
+              </TouchableOpacity>
+            )}
           </View>
         </View>
       </View>
